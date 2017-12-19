@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#212121">
+
+    <Button
+        android:layout_width="35dp"
+        android:layout_height="33dp"
+        android:id="@+id/button5"
+        android:background="@drawable/bttn"
+
+
+
+        android:layout_gravity="top|right"
+        android:layout_margin="11dp"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="300dp">
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="matrix"
+                android:background="@drawable/logoo" />
+
+            <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res/com.commonsware.android.syssvc.volume"
+                android:stretchColumns="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TableRow
+                    android:paddingBottom="20px">
+
+                </TableRow>
+
+            </TableLayout>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/body"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_below="@id/header"
+            android:layout_weight="0.5"
+            android:orientation="vertical"
+            android:showDividers="middle"
+            android:background="#424242">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="94.3 FM"
+                android:textSize="13sp"
+                android:textColor="#f2f2f2"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:background="#303030"
+                android:textAlignment="center"
+                android:padding="7dp"
+                android:gravity="center" />
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:nestedScrollingEnabled="false"
+                android:background="#424242"
+                android:gravity="center"
+                android:layout_weight="0.5">
+
+                <Button
+                android:layout_width="26dp"
+                android:layout_height="32dp"
+                    android:id="@+id/buttonPlay"
+                    android:background="@drawable/playbtn"
+                    android:layout_gravity="center"
+                    android:padding="2dp"
+                    android:gravity="center" />
+
+                <Button
+                    android:layout_width="17dp"
+                    android:layout_height="32dp"
+                    android:id="@+id/buttonStopPlay"
+                    android:layout_gravity="center"
+                    android:background="@drawable/pausebtn"
+                    android:padding="2dp"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <SeekBar
+                android:id="@+id/music"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_margin="10dp"
+                android:layout_marginBottom="5dp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/playSeekBar"
+        android:layout_gravity="center_horizontal" />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar1"
+        android:layout_gravity="right"
+        android:indeterminate="true" />
+
+</LinearLayout>
